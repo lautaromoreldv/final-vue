@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/estilo.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.json">
   <script src="js/vue.js"></script>
   <script src="js/vue2-filters.js"></script>
 </head>
@@ -30,21 +31,16 @@
     </div>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-5 ml-auto">
-                  
-                    <li class="nav-item pl-5">
-                        <a class="nav-link" href="index.html">Inicio</a>
-                    </li>
-
-                    <li class="nav-item pl-5">
-                        <a class="nav-link" href="galeria.html">Galería</a>
-                    </li>
-
-                    <li class="nav-item pl-5 active">
-                        <a class="nav-link" href="#">Contacto</a>
-                    </li>
-
+                    <li><router-link to="/" exact>Inicio</router-link></li>
+                    <li><router-link to="/galeria" exact>Galería</router-link></li>
+                    <li><router-link to="/tienda" exact>Tienda</router-link></li>
+                    <li><router-link to="/contacto" exact>Contacto</router-link></li>
                   </ul>
                 </div>
+
+                <transition name="fade" mode="out-in">
+                  <router-view></router-view>
+                </transition>
           </nav>
   </div>
   </header>
@@ -57,7 +53,11 @@
 </div>
 
 <script src="js/vue_app.js"></script>
+<script src="js/script.js"></script>
+<script src="js/vue-router.js"></script>
+<script src="js/rutas.js"></script>
+<script src="js/componentes/mostrar.js"></script>
 <script src="js/jquery-3.4.1.js"></script>
-<script src="js/bootstrap.bundle.js"></script>
+<script src="js/bootstrap.bundle.js"></script> 
 </body>
 </html>

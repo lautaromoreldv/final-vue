@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/estilo.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.json">
   <script src="js/vue.js"></script>
+  
 </head>
 
 <body>
@@ -29,90 +31,23 @@
     </div>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-5 ml-auto">
-                  
-                    <li class="nav-item pl-5">
-                        <a class="nav-link" href="index.html">Inicio</a>
-                    </li>
-
-                    <li class="nav-item pl-5 active">
-                        <a class="nav-link" href="#">Galería</a>
-                    </li>
-
-                    <li class="nav-item pl-5">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>
-
+                    <li><router-link to="/" exact>Inicio</router-link></li>
+                    <li><router-link to="/galeria" exact>Galería</router-link></li>
+                    <li><router-link to="/tienda" exact>Tienda</router-link></li>
+                    <li><router-link to="/contacto" exact>Contacto</router-link></li>
                   </ul>
                 </div>
           </nav>
   </div>
   </header>
-  <section id="info"> 
-  <article class="bg-light">
-
-    <h2 class="mb-5 pt-3 pb-3 text-center" v-bind:class="[newcolor]" v-once>{{h2_galeria}}</h2>
-    
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6 col-md-4 col-lg-3 pb-4" v-for="img in galeria">
-            <div class="card">
-                <img class="card-img-top" :src="img.url" :alt="img.alt" :title="img.alt" />
-                  <div class="card-body">
-                    <h3 class="text-center">{{img.alt}}</h3>
-                      <p class="text-center">{{img.anio}}</p>
-                  </div>
-            </div>    
-          </div>  
-        </div>
-      </div>  
-  </article>
-
-  <article class="bg-light pt-4">
-    <h2 class="mb-5 pt-3 pb-3 text-center" v-bind:class="[newcolor]" v-once>{{h2_integrantes}}</h2>
-    <div class="container">
-      <freddie></freddie>
-
-        <div class="row">
-            <div class="col-12 col-sm-6 col-md-4 pb-4" v-for="img in freddie">
-                <div class="card">
-                    <img class="card-img-top" :src="img.url" :alt="img.alt">
-                </div>    
-            </div>  
-        </div>
-    
-      <brian></brian>
-        <div class="row"> 
-          <div class="col-12 col-sm-6 col-md-4 pb-4" v-for="img in brian">
-              <div class="card">
-                  <img class="card-img-top" :src="img.url" :alt="img.alt">
-              </div>    
-          </div>          
-        </div>
-
-      <john></john>
-        <div class="row"> 
-          <div class="col-12 col-sm-6 col-md-4 pb-4" v-for="img in john">
-              <div class="card">
-                  <img class="card-img-top" :src="img.url" :alt="img.alt">
-              </div>    
-          </div>           
-        </div>
-
-      <roger></roger>
-        <div class="row"> 
-          <div class="col-12 col-sm-6 col-md-4 pb-4" v-for="img in roger">
-              <div class="card">
-                <img class="card-img-top" :src="img.url" :alt="img.alt">
-              </div>    
-          </div>           
-        </div>
-
-    </div>
-  </article>
-</section>
+  
 </div>
 
 <script src="js/vue_app.js"></script>
+<script src="js/script.js"></script>
+<script src="js/vue-router.js"></script>
+<script src="js/rutas.js"></script>
+<script src="js/componentes/mostrar.js"></script>
 <script src="js/jquery-3.4.1.js"></script>
 <script src="js/bootstrap.bundle.js"></script>   
 </body>
